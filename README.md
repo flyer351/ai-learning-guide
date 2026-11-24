@@ -9,7 +9,7 @@ Free, calm, step-by-step lessons that help curious adults learn to use AI, build
 
 ```sh
 npm install
-npm run dev      # local preview at http://localhost:4321/ai-learning-guide/
+npm run dev      # local preview at http://localhost:4321/
 npm run build    # static site in dist/
 ```
 
@@ -25,6 +25,6 @@ npm run build    # static site in dist/
 Lesson front matter: `title`, `order`, `minutes`, `summary`, and optional `device`.
 Special boxes in a lesson: wrap Markdown in `<div class="try">`, `<div class="takeaway">` or `<div class="warn">` with a blank line after the opening tag and before the closing tag. A quote (`>`) inside a `try` box gets a "Copy message" button.
 
-## Custom domain later
+## Custom domain
 
-Set `site` in `astro.config.mjs` to the domain, remove `base`, and add the domain under Settings › Pages.
+The site is served at https://aistudytime.com/. The domain is set in `astro.config.mjs` (`site`) and in `public/CNAME`, and DNS lives in Route 53 (apex A/AAAA records for GitHub Pages, `www` CNAME to `flyer351.github.io`).
