@@ -33,6 +33,16 @@ None of this means you'd be foolish to be interested. These programs are designe
 - A friendly "advisor" or "success coach" whose calls end with a sales pitch
 - Pressure to decide on the call
 
+<figure class="ladder" aria-labelledby="ladder-cap">
+<ol role="list">
+<li style="--w:18%"><span class="rung"></span><span class="lt"><b>Intro course</b> a few hundred dollars</span></li>
+<li style="--w:42%"><span class="rung"></span><span class="lt"><b>Coaching or “done with you”</b> a few thousand</span></li>
+<li style="--w:66%"><span class="rung"></span><span class="lt"><b>Partner services</b> LLC, taxes, business credit, trusts, each with its own fee</span></li>
+<li style="--w:100%"><span class="rung"></span><span class="lt"><b>“Elite” program</b> $10,000 or more, often with financing offered</span></li>
+</ol>
+<figcaption id="ladder-cap">The upsell ladder. Each step is presented as the natural next one, so the total is easy to miss until you add it up.</figcaption>
+</figure>
+
 ## Before you pay for any AI program
 
 1. **Wait 48 hours.** Real opportunities survive a weekend.

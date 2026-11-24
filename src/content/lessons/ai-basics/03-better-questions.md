@@ -14,6 +14,11 @@ You've managed people, written work orders, or explained a job to a new hire. Wr
 - **Details.** What does it need to know? Names, dates, budget, tone, what you've already tried.
 - **Format.** How should the answer look? "Three short paragraphs." "A table." "A checklist I can print."
 
+<figure class="anatomy" aria-labelledby="recipe-cap">
+<p class="prompt"><mark class="k1"><b>Role</b> You’re a friendly gardening expert.</mark> <mark class="k3"><b>Details</b> I live in central Missouri and have a sunny 4-by-8 foot raised bed.</mark> <mark class="k2"><b>Task</b> Suggest five vegetables that are easy for a beginner, with when to plant each.</mark> <mark class="k4"><b>Format</b> Put it in a simple table.</mark></p>
+<figcaption id="recipe-cap">One message, taken apart. Each color is one ingredient of the recipe. You’ll see this exact message again in the Try it now box below.</figcaption>
+</figure>
+
 You don't need all four every time. Even adding one makes a difference.
 
 ## Before and after

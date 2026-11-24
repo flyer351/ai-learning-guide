@@ -24,6 +24,25 @@ Seeing your own app on your own phone is a great moment. You can do it for free 
 
 Your app's icon now sits on your home screen.
 
+<figure class="phones" aria-labelledby="devmode-cap">
+<div class="mini-phone" aria-hidden="true"><div class="mp-screen">
+<p class="mp-title">Settings</p>
+<ul class="mp-list" role="list"><li>General</li><li>Notifications</li><li>Sounds &amp; Haptics</li><li class="hit">Privacy &amp; Security<span class="mp-tap">tap</span></li><li>Battery</li></ul>
+</div></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="mini-phone" aria-hidden="true"><div class="mp-screen">
+<p class="mp-title"><span class="mp-back">‹</span> Privacy &amp; Security</p>
+<ul class="mp-list" role="list"><li>Location Services</li><li>Tracking</li><li class="mp-gap">Security</li><li class="hit">Developer Mode<span class="mp-tap">tap</span></li></ul>
+</div></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="mini-phone" aria-hidden="true"><div class="mp-screen">
+<p class="mp-title"><span class="mp-back">‹</span> Developer Mode</p>
+<ul class="mp-list" role="list"><li class="hit">Developer Mode <span class="mp-toggle on"></span></li></ul>
+<p class="mp-note">Turning on Developer Mode requires a restart.</p>
+</div></div>
+<figcaption id="devmode-cap">A simplified drawing of step 2 on the iPhone. <b>1</b> In <b>Settings</b>, tap <b>Privacy &amp; Security</b> (scroll down to find it). <b>2</b> Scroll to the bottom and tap <b>Developer Mode</b>. <b>3</b> Turn it on. Your phone will restart. The labels may differ a little on your iOS version.</figcaption>
+</figure>
+
 ## The seven-day catch
 
 With a free account, apps you install this way stop opening after about seven days. Just connect and press Run again. A paid developer membership removes that limit and lets you share test versions with friends through Apple's **TestFlight** app.
