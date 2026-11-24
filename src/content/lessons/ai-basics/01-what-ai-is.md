@@ -11,6 +11,17 @@ You've probably heard "AI" used for everything from self-driving cars to the spe
 
 An AI assistant has read an enormous amount of text: books, websites, manuals, articles. From all that reading, it learned the patterns of language well enough to write sensible replies to almost anything. It doesn't look answers up in a filing cabinet. It writes each answer fresh, word by word, based on those patterns. That's why it can draft a letter in your voice, and also why it can occasionally state something false with total confidence.
 
+<figure class="nextword" aria-labelledby="nw-cap">
+<p class="nw-sentence">The best time to plant tomatoes is after the last <span class="nw-blank">______</span></p>
+<ul class="nw-bars" role="list">
+<li><span class="nw-word">frost</span><span class="nw-bar" style="--w:88%"></span><span class="nw-pct">88%</span></li>
+<li><span class="nw-word">freeze</span><span class="nw-bar" style="--w:7%"></span><span class="nw-pct">7%</span></li>
+<li><span class="nw-word">snow</span><span class="nw-bar" style="--w:3%"></span><span class="nw-pct">3%</span></li>
+<li><span class="nw-word">day</span><span class="nw-bar" style="--w:2%"></span><span class="nw-pct">2%</span></li>
+</ul>
+<figcaption id="nw-cap">How an assistant writes: at each step it weighs which word most likely comes next, picks one, and repeats, thousands of times a minute. (The percentages are made up, for illustration.) Usually the likely word is also the true one. When it isn’t, you get a confident mistake.</figcaption>
+</figure>
+
 ## What it's good at
 
 - **Writing and rewriting.** Letters, emails, summaries, toasts, complaint letters, product descriptions.

@@ -25,6 +25,22 @@ Like a new employee, an agent is capable but needs clear instructions, limits on
 
 An agent is an AI assistant that has been given **tools**: a web browser it can click in, access to certain folders, or the ability to run programs. It plans a step, takes it, looks at the result, and decides the next step, over and over, until the job is done or it gets stuck and asks you.
 
+<figure class="flow" aria-labelledby="loop-cap">
+<div class="node you"><b>You</b> Give it a goal: “Find three quotes for gutter cleaning and put them in a table.”</div>
+<div class="arrow" aria-hidden="true">↓</div>
+<div class="loop">
+<p class="loop-label"><span aria-hidden="true">↻</span> The agent repeats these steps</p>
+<ol>
+<li><strong>Plans</strong> the next step</li>
+<li><strong>Acts:</strong> opens a website, fills in a form, reads a file</li>
+<li><strong>Looks</strong> at what happened, then goes back to step 1</li>
+</ol>
+</div>
+<div class="arrow" aria-hidden="true">↓</div>
+<div class="node you"><b>You</b> Check the finished table, or answer a question if it got stuck</div>
+<figcaption id="loop-cap">The agent loop. You’re at the start and the end, and a good agent stops to ask before anything risky, like paying or sending.</figcaption>
+</figure>
+
 <div class="try">
 
 **Try it now.** Ask the assistant you've been using:
