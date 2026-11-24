@@ -17,6 +17,11 @@ Seeing your own app on your own phone is a great moment. You can do it for free 
 5. Click **▶ Run**.
 6. The first time, your iPhone may say the developer isn't trusted. Go to **Settings › General › VPN & Device Management**, tap your Apple Account email under Developer App, and choose **Trust**.
 
+<figure class="diagram shot">
+<a href="/media/xcode/signing-team.webp"><img src="/media/xcode/signing-team.webp" width="1200" height="803" loading="lazy" alt="Xcode’s Signing and Capabilities screen. A marks the project name at the top of the file list. B marks the Signing and Capabilities tab. C marks the Team menu, currently set to None. D marks a yellow warning that says signing requires a development team."></a>
+<figcaption>Step 3 in Xcode. <b>A</b> your project name, <b>B</b> the Signing &amp; Capabilities tab, <b>C</b> the Team menu. <b>D</b> is the warning you’ll see until you pick a team. It goes away once you do.</figcaption>
+</figure>
+
 Your app's icon now sits on your home screen.
 
 ## The seven-day catch
