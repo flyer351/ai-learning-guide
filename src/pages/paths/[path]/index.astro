@@ -27,9 +27,10 @@ const nextPath = paths[idx + 1];
     <h2>Lessons in this path</h2>
     <ol class="lesson-list" role="list">
       {lessons.map((l) => (
-        <li><a href={url(`paths/${path.slug}/${slugOf(l)}`)}><div><strong>{l.data.title}</strong><span>{l.data.summary} · {l.data.minutes} min</span></div></a></li>
+        <li><a href={url(`paths/${path.slug}/${slugOf(l)}`)}><div><strong>{l.data.title}</strong><span>{l.data.summary} · {l.data.minutes} min</span></div><span class="chev" aria-hidden="true">›</span></a></li>
       ))}
     </ol>
-    {nextPath && <a class="next" href={url(`paths/${nextPath.slug}`)}><span><small>Next path</small><b>{nextPath.title}</b></span><span class="arrow">→</span></a>}
+    {lessons.length > 0 && <a class="next" href={url(`paths/${path.slug}/${slugOf(lessons[0])}`)}><span><small>Begin this path · Lesson 1</small><b>{lessons[0].data.title}</b></span><span class="arrow">→</span></a>}
+    {nextPath && <p class="skip-path">Already comfortable with this? <a href={url(`paths/${nextPath.slug}`)}>Skip to the next path: {nextPath.title}</a></p>}
   </div>
 </Base>

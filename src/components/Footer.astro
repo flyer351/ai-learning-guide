@@ -1,9 +1,10 @@
 ---
 import { url } from '../data/url';
+import { analyticsOn } from '../data/analytics';
 ---
 <footer class="site-footer">
   <div class="wrap">
-    <p><strong>AI Learning Guide</strong> is free education for curious adults. No accounts, no ads, no cookies, no tracking, and nothing for sale.</p>
+    <p><strong>AI Learning Guide</strong> is free education for curious adults. {analyticsOn ? 'No accounts, no ads, no cookies, and nothing for sale. We count visits anonymously, and that\'s all.' : 'No accounts, no ads, no cookies, no tracking, and nothing for sale.'}</p>
     <p>Nothing here is financial, legal or tax advice. Product names belong to their owners, and features change often, so check each company's own site for current details.</p>
     <p><a href={url('about')}>About this guide</a> · <a href={url('paths')}>All paths</a> · <a href={url('paths/money-honestly/spotting-scams')}>Spotting AI money scams</a></p>
   </div>

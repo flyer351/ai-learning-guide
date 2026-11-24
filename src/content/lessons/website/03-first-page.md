@@ -26,6 +26,8 @@ Web pages are written in **HTML** (the content) and **CSS** (the look). You don'
 
 That's your website, running on your own computer.
 
+Building in a chat instead (option 2 in the last lesson)? You'll see the page in the preview right away. Use **Download** to save it as `index.html` in your `my-website` folder, then double-click it as in step 3. Using a cloud coding agent (option 3)? Paste the same request into it, and it creates the file for you.
+
 ## Make changes
 
 Ask for changes the same way you'd brief a designer:

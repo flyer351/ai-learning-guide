@@ -33,9 +33,16 @@ You can photograph lab results and ask for an explanation. Crop out your name, b
 - Diagnose something urgent. **For chest pain, stroke signs or other emergencies, call 911.**
 - Decide between treatments for you. It can help you understand the choices.
 
-## Medicare and insurance
+## Health insurance
 
-AI can explain the difference between Medicare Advantage and Medigap, what Part D covers, or how an appeal works. Rules and plans change every year, so confirm details at [Medicare.gov](https://www.medicare.gov) or with your [State Health Insurance Assistance Program (SHIP)](https://www.shiphelp.org), which offers free, unbiased counseling.
+Insurance paperwork is confusing at every age, and AI is good at turning it into plain English. Whatever kind of coverage you have, it can help you understand what you're looking at.
+
+- **Through an employer:** "Explain the difference between this PPO and this high-deductible plan with an HSA. I see a doctor about six times a year and take one generic prescription." Paste in the plan summaries from your benefits packet (with your name and member ID removed) for a side-by-side comparison.
+- **On your own (the ACA Marketplace):** "What's the difference between a Bronze, Silver and Gold plan, and how do premium tax credits work?" Then confirm your actual options and savings at [HealthCare.gov](https://www.healthcare.gov) or your state's marketplace.
+- **Medicare:** "What's the difference between Medicare Advantage and Medigap, and what does Part D cover?" Confirm at [Medicare.gov](https://www.medicare.gov), or get free, unbiased counseling from your [State Health Insurance Assistance Program (SHIP)](https://www.shiphelp.org).
+- **Any plan:** "Explain this Explanation of Benefits. What did insurance pay, and what do I owe?" or "My claim was denied. How does an appeal usually work, and what should my letter say?"
+
+Plans, prices and rules change every year, so treat AI's answer as a starting point. Your plan's own documents, the member services number on your card, or your employer's HR or benefits team have the final word.
 
 <div class="warn">
 

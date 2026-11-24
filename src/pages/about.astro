@@ -1,4 +1,5 @@
 ---
+import { analyticsOn } from '../data/analytics';
 import Base from '../layouts/Base.astro';
 import { url } from '../data/url';
 ---
@@ -24,7 +25,14 @@ import { url } from '../data/url';
 
     <h2>Our privacy promise</h2>
     <div class="card">
-      <p>This site has no accounts, no cookies, no analytics, no ads and no tracking pixels. It loads no outside fonts or scripts. Nothing you do here is recorded or sent anywhere.</p>
+      {analyticsOn ? (
+        <>
+          <p>This site has no accounts, no cookies, no ads and no tracking pixels. Nothing you type or read here is linked to you.</p>
+          <p>To know roughly how many people visit, the site uses <a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a>. It counts page visits without cookies, without fingerprinting, and without recording who you are. We see totals, such as "120 visits this week," and nothing about any one person.</p>
+        </>
+      ) : (
+        <p>This site has no accounts, no cookies, no analytics, no ads and no tracking pixels. It loads no outside fonts or scripts. Nothing you do here is recorded or sent anywhere.</p>
+      )}
       <p>The site is hosted on GitHub Pages, which keeps standard server logs, as every web host does.</p>
     </div>
 
