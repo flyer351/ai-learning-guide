@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" font-family="Figtree, -apple-system, 'Segoe UI', sans-serif">
+  <title>Simplified drawing of the Xcode window</title>
+  <desc>A: the Run button at the top left. B: the device menu at the top centre, set to iPhone 17. C: the list of your project's files on the left. D: your code in the middle. E: the preview on the right, showing Hello, world!</desc>
+  <!-- window -->
+  <rect x="4" y="4" width="632" height="412" rx="16" fill="#ffffff" stroke="#c9c3b3" stroke-width="2"/>
+  <!-- toolbar -->
+  <path d="M4 20a16 16 0 0 1 16-16h600a16 16 0 0 1 16 16v44H4z" fill="#eeebe3"/>
+  <line x1="4" y1="64" x2="636" y2="64" stroke="#c9c3b3" stroke-width="2"/>
+  <circle cx="26" cy="34" r="7" fill="#e2675d"/><circle cx="48" cy="34" r="7" fill="#e6b44d"/><circle cx="70" cy="34" r="7" fill="#5fbf63"/>
+  <!-- A: run button -->
+  <rect x="94" y="18" width="40" height="32" rx="8" fill="#ffffff" stroke="#1f4d3f" stroke-width="3"/>
+  <path d="M108 25l14 9-14 9z" fill="#1f4d3f"/>
+  <rect x="142" y="22" width="22" height="24" rx="5" fill="#ffffff" stroke="#b9b3a4" stroke-width="2"/>
+  <rect x="148" y="28" width="10" height="12" rx="1" fill="#b9b3a4"/>
+  <!-- B: device menu -->
+  <rect x="216" y="18" width="240" height="32" rx="8" fill="#ffffff" stroke="#1f4d3f" stroke-width="3"/>
+  <text x="232" y="40" font-size="16" fill="#1d2522"><tspan font-weight="700">WalkLog</tspan>  ›  iPhone 17</text>
+  <path d="M436 30l6 6 6-6" fill="none" stroke="#1d2522" stroke-width="2"/>
+  <!-- C: file list -->
+  <rect x="6" y="66" width="150" height="348" fill="#f6f3ec"/>
+  <line x1="156" y1="66" x2="156" y2="414" stroke="#c9c3b3" stroke-width="2"/>
+  <g font-size="15" fill="#1d2522">
+    <text x="20" y="130" font-weight="700">▾ WalkLog</text>
+    <text x="36" y="158">▾ WalkLog</text>
+    <rect x="44" y="170" width="108" height="26" rx="6" fill="#dcece4"/>
+    <text x="52" y="188">ContentView</text>
+    <text x="52" y="218">WalkLogApp</text>
+    <text x="52" y="248">Assets</text>
+  </g>
+  <!-- D: code -->
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="174" y="98" fill="#a0457b">import</text><text x="232" y="98" fill="#1d2522">SwiftUI</text>
+    <text x="174" y="134" fill="#a0457b">struct</text><text x="232" y="134" fill="#2e6b57">ContentView</text><text x="330" y="134" fill="#1d2522">: View {</text>
+    <text x="190" y="160" fill="#a0457b">var</text><text x="222" y="160" fill="#1d2522">body: some View {</text>
+    <text x="206" y="186" fill="#1d2522">Text(</text><text x="250" y="186" fill="#b5401f">"Hello, world!"</text><text x="372" y="186" fill="#1d2522">)</text>
+    <text x="190" y="212" fill="#1d2522">}</text>
+    <text x="174" y="238" fill="#1d2522">}</text>
+  </g>
+  <rect x="174" y="262" width="190" height="10" rx="5" fill="#eeebe3"/>
+  <rect x="174" y="286" width="150" height="10" rx="5" fill="#eeebe3"/>
+  <rect x="174" y="310" width="170" height="10" rx="5" fill="#eeebe3"/>
+  <!-- E: preview -->
+  <line x1="420" y1="66" x2="420" y2="414" stroke="#c9c3b3" stroke-width="2"/>
+  <rect x="422" y="66" width="212" height="348" fill="#f6f3ec"/>
+  <rect x="470" y="88" width="116" height="236" rx="22" fill="#1b1f1d"/>
+  <rect x="476" y="94" width="104" height="224" rx="17" fill="#ffffff"/>
+  <text x="528" y="212" font-size="15" text-anchor="middle" fill="#1d2522">Hello, world!</text>
+  <!-- markers -->
+  <g font-size="28" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <circle cx="114" cy="92" r="24" fill="#b07a1a"/><text x="114" y="102">A</text>
+    <circle cx="336" cy="92" r="24" fill="#b07a1a" stroke="#fff" stroke-width="3"/><text x="336" y="102">B</text>
+    <circle cx="120" cy="360" r="24" fill="#b07a1a"/><text x="120" y="370">C</text>
+    <circle cx="390" cy="360" r="24" fill="#b07a1a"/><text x="390" y="370">D</text>
+    <circle cx="600" cy="360" r="24" fill="#b07a1a"/><text x="600" y="370">E</text>
+  </g>
+  <path d="M114 68v-14M336 68v-14" stroke="#b07a1a" stroke-width="3"/>
+</svg>

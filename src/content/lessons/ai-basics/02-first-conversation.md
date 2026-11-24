@@ -32,6 +32,25 @@ Each also has a free app for iPhone, iPad and Android.
 4. Type your question and press Enter (or tap the arrow button).
 5. Read the reply, then ask a follow-up, just as you would with a person.
 
+## Copy, paste, send
+
+The green **Try it now** boxes in these lessons hold a message for you to copy and send to your assistant. Here's what that looks like on an iPhone:
+
+<figure class="demo">
+<div class="demo-frame">
+<video src="/media/copy-paste.mp4" poster="/media/copy-paste-poster.webp" muted loop playsinline preload="metadata" controls width="360" height="540" aria-label="Animation of an iPhone: tapping Copy on this website, switching to an AI assistant app, pressing and holding the message box, tapping Paste, then tapping the send arrow."></video>
+</div>
+<figcaption>A short animation with no sound. The same steps are written out below.</figcaption>
+</figure>
+
+1. Tap **Copy this message** under the box. The button changes to "Copied!"
+2. Switch to your AI assistant: open its app, or its tab in your browser.
+3. Press and hold your finger in the assistant's message box for about a second, until a small **Paste** button appears.
+4. Tap **Paste**. Change any details that don't fit you.
+5. Tap the arrow to send.
+
+On a computer, click **Copy this message**, click in the assistant's message box, then press **Command-V** on a Mac or **Ctrl-V** on Windows, and press Enter.
+
 <div class="try">
 
 **Try it now.** Paste this in as your first message, changing the details to fit you:

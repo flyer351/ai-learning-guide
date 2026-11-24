@@ -24,6 +24,21 @@ summary: Set up Apple's free app-building software and see a "Hello, world" app 
 
 ## Run it
 
+Here's a simplified map of the Xcode window, so you know where to look. The letters match the list below the drawing.
+
+<figure class="diagram">
+<a href="/media/xcode-window.svg"><img src="/media/xcode-window.svg" width="640" height="420" alt="Simplified drawing of the Xcode window. A, the Run button, is at the top left. B, the device menu, is at the top centre and reads WalkLog, iPhone 17. C, the list of files, runs down the left side. D, your code, is in the middle. E, the preview of the app, is on the right and shows Hello, world!"></a>
+<figcaption>A simplified drawing, not a screenshot, so your Xcode may look a little different. Tap it to see it larger.</figcaption>
+</figure>
+
+<ul class="legend">
+<li><b>A</b><span><strong>Run button</strong> (▶). Builds your app and starts it.</span></li>
+<li><b>B</b><span><strong>Device menu.</strong> Chooses where the app runs: a pretend iPhone (the Simulator) or your own phone.</span></li>
+<li><b>C</b><span><strong>Your files.</strong> Click one to open it. <code>ContentView</code> is your app's first screen.</span></li>
+<li><b>D</b><span><strong>Your code.</strong> This is where AI's code goes.</span></li>
+<li><b>E</b><span><strong>Preview.</strong> A live picture of the screen you're working on. If it's hidden, choose <strong>Editor › Canvas</strong>.</span></li>
+</ul>
+
 1. At the top of the Xcode window, there's a device menu. Choose an iPhone model, such as "iPhone 17."
 2. Click the **▶ Run** button (top left), or press Command-R.
 3. After a minute, a pretend iPhone, the **Simulator**, appears with "Hello, world!" on the screen.

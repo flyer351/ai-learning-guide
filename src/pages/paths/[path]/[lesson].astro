@@ -46,19 +46,55 @@ const { Content } = await render(lesson);
     // announcing them as lists. An explicit role keeps them announced.
     document.querySelectorAll('.prose ol, .prose ul').forEach((l) => l.setAttribute('role', 'list'));
 
-    // Adds a "Copy message" button under each example prompt. Runs only in the reader's browser.
+    // Adds a "Copy this message" button under each example prompt. Runs only in the reader's browser.
+    const clip = '<svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6"/></svg>';
+    const tick = '<svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+    const idle = `${clip}<span>Copy this message</span>`;
     document.querySelectorAll('.try blockquote').forEach((q) => {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'copy';
-      b.textContent = 'Copy message';
+      b.innerHTML = idle;
+      const hint = document.createElement('p');
+      hint.className = 'copy-hint';
+      hint.setAttribute('role', 'status');
+      let timer: ReturnType<typeof setTimeout>;
       b.addEventListener('click', async () => {
         const text = (q as HTMLElement).innerText.trim();
-        try { await navigator.clipboard.writeText(text); b.textContent = 'Copied'; }
-        catch { const r = document.createRange(); r.selectNodeContents(q); const s = getSelection(); s?.removeAllRanges(); s?.addRange(r); b.textContent = 'Selected, now press copy'; }
-        setTimeout(() => (b.textContent = 'Copy message'), 2500);
+        clearTimeout(timer);
+        try {
+          await navigator.clipboard.writeText(text);
+          b.innerHTML = `${tick}<span>Copied!</span>`;
+          b.classList.add('done');
+          hint.textContent = 'Now switch to your AI assistant, press and hold in its message box, and choose Paste.';
+        } catch {
+          const r = document.createRange(); r.selectNodeContents(q); const s = getSelection(); s?.removeAllRanges(); s?.addRange(r);
+          hint.textContent = 'The text is highlighted. Choose Copy from the menu that appears, or press Command-C (Ctrl-C on Windows).';
+        }
+        timer = setTimeout(() => { b.innerHTML = idle; b.classList.remove('done'); }, 4000);
       });
       q.after(b);
+      b.after(hint);
+    });
+
+    // Walkthrough videos: play on their own (muted, looping) unless the reader has asked
+    // their device to reduce motion. A Pause/Play button is always there.
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll<HTMLElement>('.demo').forEach((fig) => {
+      const v = fig.querySelector('video');
+      if (!v) return;
+      v.removeAttribute('controls');
+      const t = document.createElement('button');
+      t.type = 'button';
+      t.className = 'demo-toggle';
+      const label = () => { t.textContent = v.paused ? '▶ Play the walkthrough' : '❚❚ Pause'; };
+      t.addEventListener('click', () => { v.paused ? v.play() : v.pause(); });
+      v.addEventListener('play', label);
+      v.addEventListener('pause', label);
+      v.addEventListener('click', () => { v.paused ? v.play() : v.pause(); });
+      fig.querySelector('.demo-frame')?.after(t);
+      if (!still) v.play().catch(() => {});
+      label();
     });
   </script>
 </Base>
