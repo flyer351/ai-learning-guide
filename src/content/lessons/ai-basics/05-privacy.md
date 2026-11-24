@@ -17,7 +17,7 @@ AI assistants are run by companies, and what you type is stored on their compute
 ## Fine to share, with judgment
 
 - General health questions ("What are common side effects of statins?"), without your full name and date of birth
-- Your situation in general terms ("I'm 67, retired, with a small pension")
+- Your situation in general terms ("I'm 42, a nurse working night shifts, saving for my kids' college") rather than names, employers and account details
 - Documents with personal details blacked out or removed first
 
 ## Settings worth a look

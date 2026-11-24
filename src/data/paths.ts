@@ -44,7 +44,7 @@ export const paths: LearningPath[] = [
     slug: 'website',
     title: 'Build a website',
     blurb: 'Make a simple site and publish it for free.',
-    intro: 'A personal website is one of the best first projects: low cost, forgiving, and something you can show friends and family. Everything in this path works on a Mac or a Windows PC.',
+    intro: 'A personal website is one of the best first projects: low cost, forgiving, and something you can show friends and family. Everything in this path works on a Mac or a Windows PC, and you can even start from a tablet or phone.',
     icon: 'globe',
     device: 'Mac or PC',
   },
