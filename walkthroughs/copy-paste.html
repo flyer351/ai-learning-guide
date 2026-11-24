@@ -1,0 +1,190 @@
+<!doctype html>
+<!-- Storyboard for the "copy a message into your AI assistant" walkthrough video.
+     render(t) draws the frame at t seconds; walkthroughs/record.mjs steps through it and
+     encodes public/media/copy-paste.mp4. Open this file in a browser to preview it live. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copy and paste walkthrough</title>
+<style>
+  @font-face { font-family: Figtree; font-weight: 400; src: url(../node_modules/@fontsource/figtree/files/figtree-latin-400-normal.woff2); }
+  @font-face { font-family: Figtree; font-weight: 600; src: url(../node_modules/@fontsource/figtree/files/figtree-latin-600-normal.woff2); }
+  @font-face { font-family: Figtree; font-weight: 700; src: url(../node_modules/@fontsource/figtree/files/figtree-latin-700-normal.woff2); }
+  :root { --green: #1f4d3f; --green-2: #2e6b57; --mint: #dcece4; --sand: #f6f3ec; --gold: #f2c86b; --ink: #1d2522; --muted: #56625c; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: Figtree, sans-serif; color: var(--ink); }
+  #stage { width: 360px; height: 540px; position: relative; overflow: hidden; background: var(--mint); }
+
+  /* Caption across the top: step number and what to do. */
+  .cap { position: absolute; left: 16px; right: 16px; top: 14px; height: 84px; display: flex; gap: 12px; align-items: center; }
+  .cap b { flex: none; width: 44px; height: 44px; border-radius: 14px; background: var(--green); color: #fff; display: grid; place-items: center; font-size: 22px; }
+  .cap span { font-size: 23px; line-height: 1.2; font-weight: 700; color: var(--green); }
+
+  .phone { position: absolute; left: 65px; top: 108px; width: 230px; height: 424px; border-radius: 38px; background: #1b1f1d; padding: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+  .screen { position: relative; width: 100%; height: 100%; border-radius: 30px; overflow: hidden; background: #fff; }
+  .scene { position: absolute; inset: 0; }
+  .status { height: 30px; display: flex; justify-content: space-between; align-items: center; padding: 0 22px; font-size: 12px; font-weight: 700; }
+  .status i { width: 22px; height: 10px; border: 1.5px solid currentColor; border-radius: 3px; display: block; }
+
+  /* Scene A: this website in Safari */
+  #a { background: var(--sand); }
+  #a .page { padding: 4px 12px; }
+  #a .crumb { font-size: 11px; font-weight: 700; color: var(--muted); margin: 2px 2px 6px; }
+  #a .try { background: var(--green); border-radius: 16px; padding: 12px 11px 11px; color: #e5efe9; font-size: 12.5px; line-height: 1.35; }
+  #a .try strong { color: #fff; }
+  #a .sheet { margin-top: 9px; background: #fffdf7; border: 1.5px dashed #c9c3b3; border-bottom: 0; border-radius: 10px 10px 0 0; }
+  #a .sheet .lab { font-size: 9.5px; letter-spacing: .05em; font-weight: 700; color: var(--muted); padding: 6px 9px; border-bottom: 1.5px dashed #c9c3b3; }
+  #a .sheet p { margin: 0; padding: 8px 9px 10px; color: var(--ink); font-size: 13px; line-height: 1.35; }
+  #a .btn { height: 38px; border-radius: 0 0 10px 10px; background: var(--gold); color: var(--green); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+  #a .btn.done { background: #fff; }
+  #a .url { position: absolute; left: 12px; right: 12px; bottom: 14px; height: 36px; border-radius: 12px; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.12); display: grid; place-items: center; font-size: 13px; color: var(--ink); }
+
+  /* Scene B: a generic AI assistant app (no real brand) */
+  #b { background: #fff; }
+  #b .top { height: 40px; display: flex; align-items: center; justify-content: center; gap: 7px; font-weight: 700; font-size: 15px; border-bottom: 1px solid #eee; }
+  #b .top i { width: 18px; height: 18px; border-radius: 50%; background: var(--green-2); display: block; }
+  #b .hello { position: absolute; left: 0; right: 0; top: 150px; text-align: center; font-size: 20px; font-weight: 600; color: #8b918e; }
+  #b .me { position: absolute; right: 12px; top: 82px; max-width: 168px; background: var(--mint); border-radius: 16px 16px 4px 16px; padding: 8px 10px; font-size: 12px; line-height: 1.35; }
+  #b .reply { position: absolute; left: 12px; right: 30px; top: 196px; font-size: 12.5px; line-height: 1.4; }
+  #b .reply p { margin: 0 0 6px; }
+  #b .dots { position: absolute; left: 14px; top: 200px; display: flex; gap: 5px; }
+  #b .dots i { width: 8px; height: 8px; border-radius: 50%; background: #9aa19d; display: block; }
+  #b .box { position: absolute; left: 10px; right: 10px; bottom: 14px; min-height: 44px; border-radius: 22px; border: 1.5px solid #cfd4d1; background: #fff; display: flex; align-items: flex-end; padding: 6px 6px 6px 14px; gap: 6px; }
+  #b .box .ph { flex: 1; font-size: 14px; color: #8b918e; align-self: center; }
+  #b .box .txt { flex: 1; font-size: 12px; line-height: 1.35; color: var(--ink); padding: 3px 0; }
+  #b .send { flex: none; width: 30px; height: 30px; border-radius: 50%; background: #d6dad8; color: #fff; display: grid; place-items: center; font-size: 17px; font-weight: 700; }
+  #b .send.on { background: var(--green); }
+  #b .paste { position: absolute; left: 22px; bottom: 66px; background: #2b2f2d; color: #fff; font-size: 15px; font-weight: 600; padding: 9px 18px; border-radius: 10px; }
+  #b .paste::after { content: ''; position: absolute; left: 26px; bottom: -6px; border: 7px solid transparent; border-top-color: #2b2f2d; border-bottom: 0; }
+
+  /* The finger: a soft touch marker with a ring that grows while pressing. */
+  .finger { position: absolute; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: rgba(31,77,63,.30); border: 3px solid rgba(255,255,255,.95); box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 5; }
+  .ring { position: absolute; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; border: 3px solid var(--green); z-index: 4; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="cap"><b id="num">1</b><span id="say"></span></div>
+  <div class="phone"><div class="screen" id="screen">
+    <div class="scene" id="a">
+      <div class="status"><span>9:41</span><i></i></div>
+      <div class="page">
+        <div class="crumb">← AI basics · Lesson 2</div>
+        <div class="try">
+          <strong>Try it now.</strong> Paste this in as your first message:
+          <div class="sheet">
+            <div class="lab">MESSAGE TO COPY</div>
+            <p>I spent 30 years in manufacturing and I’m new to AI. Explain what you can help me with, in plain English, in five short bullet points.</p>
+          </div>
+          <div class="btn" id="copybtn"></div>
+        </div>
+      </div>
+      <div class="url">aistudytime.com</div>
+    </div>
+    <div class="scene" id="b">
+      <div class="status"><span>9:41</span><i></i></div>
+      <div class="top"><i></i>AI assistant</div>
+      <div class="hello" id="hello">How can I help?</div>
+      <div class="me" id="me">I spent 30 years in manufacturing and I’m new to AI. Explain what you can help me with, in plain English, in five short bullet points.</div>
+      <div class="dots" id="dots"><i></i><i></i><i></i></div>
+      <div class="reply" id="reply"><p>Happy to help! Here are five things I can do for you:</p><p>• Explain new ideas in plain English</p><p>• Help you write letters and emails</p></div>
+      <div class="paste" id="paste">Paste</div>
+      <div class="box" id="box"><span class="ph" id="ph">Ask anything</span><span class="txt" id="txt">I spent 30 years in manufacturing and I’m new to AI. Explain what you can help me with…</span><span class="send" id="send">↑</span></div>
+    </div>
+    <div class="ring" id="ring"></div>
+    <div class="finger" id="finger"></div>
+  </div></div>
+</div>
+<script>
+  const DURATION = 15;
+  const $ = (id) => document.getElementById(id);
+  const clamp = (x) => Math.max(0, Math.min(1, x));
+  const ease = (x) => { x = clamp(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; };
+  const span = (t, a, b) => ease((t - a) / (b - a)); // 0 before a, 1 after b, eased between
+  const show = (el, on) => { el.style.display = on ? '' : 'none'; };
+  const fade = (el, o) => { el.style.opacity = o; el.style.display = o <= 0 ? 'none' : ''; };
+
+  const steps = [
+    [0, '1', 'Tap “Copy this message” on this website'],
+    [3.4, '2', 'Switch to your AI assistant app'],
+    [5.2, '3', 'Press and hold the message box'],
+    [7.0, '4', 'Tap Paste'],
+    [7.9, '5', 'Tap the arrow to send'],
+    [10.2, '✓', 'Your answer appears in a moment'],
+  ];
+  // Where the finger is at each moment: [time, x, y] in screen pixels (screen is 214 × 408).
+  const path = [
+    [0, 160, 440], [1.0, 160, 440], [1.7, 107, 291], [2.6, 107, 291], [3.1, 150, 390],
+    [5.0, 150, 390], [5.6, 80, 376], [6.9, 80, 376], [7.4, 50, 323], [7.75, 50, 323], [8.3, 130, 250],
+    [8.7, 150, 300], [9.1, 186, 372], [9.7, 186, 372], [10.4, 170, 420],
+  ];
+  const fingerAt = (t) => {
+    for (let i = 1; i < path.length; i++) {
+      const [t0, x0, y0] = path[i - 1], [t1, x1, y1] = path[i];
+      if (t <= t1) { const k = ease((t - t0) / (t1 - t0)); return [x0 + (x1 - x0) * k, y0 + (y1 - y0) * k]; }
+    }
+    return path[path.length - 1].slice(1);
+  };
+  const taps = [1.85, 7.6, 9.25]; // quick taps (Copy, Paste, Send)
+
+  window.render = function (t) {
+    t = ((t % DURATION) + DURATION) % DURATION;
+    const s = steps.filter((x) => t >= x[0]).pop();
+    $('num').textContent = s[1];
+    $('say').textContent = s[2];
+
+    // Copy button
+    const copied = t >= 1.9;
+    $('copybtn').className = 'btn' + (copied ? ' done' : '');
+    $('copybtn').innerHTML = copied ? '✓ Copied!' : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6"/></svg> Copy this message';
+
+    // Switching apps: website slides left, assistant slides in from the right.
+    const sw = span(t, 3.5, 4.3);
+    const back = span(t, 14.0, 14.7); // loop back to the start
+    $('a').style.transform = `translateX(${back > 0 ? -100 + 100 * back : -100 * sw}%)`;
+    $('b').style.transform = `translateX(${back > 0 ? 100 * back : 100 - 100 * sw}%)`;
+
+    // Long press and the Paste bubble
+    const pressing = t >= 5.65 && t < 6.9;
+    const pk = clamp((t - 5.65) / 1.1);
+    const [fx, fy] = fingerAt(t);
+    $('finger').style.left = fx + 'px'; $('finger').style.top = fy + 'px';
+    let fs = 1;
+    for (const tap of taps) if (Math.abs(t - tap) < 0.15) fs = 0.8;
+    if (pressing) fs = 0.82;
+    $('finger').style.transform = `scale(${fs})`;
+    $('finger').style.opacity = String(t < 0.6 ? span(t, 0, 0.6) : 1 - span(t, 10.0, 10.5));
+    $('ring').style.left = fx + 'px'; $('ring').style.top = fy + 'px';
+    $('ring').style.display = pressing ? '' : 'none';
+    $('ring').style.transform = `scale(${1 + pk * 0.9})`;
+    $('ring').style.opacity = String(0.9 - pk * 0.6);
+    fade($('paste'), t >= 6.9 && t < 7.7 ? span(t, 6.9, 7.1) : 0);
+
+    // Message box fills after Paste, empties when sent.
+    const pasted = t >= 7.7 && t < 9.3;
+    show($('ph'), !pasted);
+    show($('txt'), pasted);
+    $('send').className = 'send' + (pasted ? ' on' : '');
+    $('box').style.borderColor = t >= 5.65 && t < 9.3 ? '#2e6b57' : '#cfd4d1';
+
+    // Sent message, typing dots, then the reply.
+    const sent = span(t, 9.3, 9.6);
+    fade($('hello'), 1 - sent);
+    fade($('me'), sent);
+    $('me').style.transform = `translateY(${(1 - sent) * 30}px)`;
+    const typing = t >= 9.8 && t < 10.9;
+    show($('dots'), typing);
+    [...$('dots').children].forEach((d, i) => { d.style.transform = `translateY(${typing ? -3 * Math.max(0, Math.sin((t * 6) - i * 0.9)) : 0}px)`; });
+    fade($('reply'), span(t, 10.9, 11.3));
+  };
+
+  // Live preview when the file is opened directly in a browser.
+  if (!location.search.includes('still')) {
+    const t0 = performance.now();
+    const tick = (now) => { render((now - t0) / 1000); requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  } else render(0);
+</script>
+</body>
+</html>
