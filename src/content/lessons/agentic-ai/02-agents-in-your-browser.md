@@ -11,7 +11,7 @@ Several AI products can now operate a web browser: reading pages, clicking butto
 
 - "Find the three cheapest round-trip flights from St. Louis to Phoenix the second week of March, nonstop only. Don't book anything."
 - "Look up the return policy on these three store websites and summarize them in a table."
-- "Find appointment times for a passport renewal at post offices within 20 miles of my ZIP code."
+- "Find appointment times for a first-time passport application at post offices within 20 miles of my ZIP code."
 
 Notice the pattern: **research and gather**, then **you** decide and act.
 

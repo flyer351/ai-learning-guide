@@ -15,7 +15,7 @@ Seeing your own app on your own phone is a great moment. You can do it for free 
 3. In Xcode, click your project's name at the top of the left-hand file list, choose the **Signing & Capabilities** tab, and under **Team** choose your name (Personal Team). If it isn't there, click **Add Account** and sign in.
 4. In the device menu at the top of Xcode, choose your iPhone instead of a simulator.
 5. Click **▶ Run**.
-6. The first time, your iPhone may say the developer isn't trusted. Go to **Settings › General › VPN & Device Management**, tap your Apple ID under Developer App, and choose **Trust**.
+6. The first time, your iPhone may say the developer isn't trusted. Go to **Settings › General › VPN & Device Management**, tap your Apple Account email under Developer App, and choose **Trust**.
 
 Your app's icon now sits on your home screen.
 

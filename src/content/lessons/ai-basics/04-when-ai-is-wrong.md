@@ -19,7 +19,7 @@ Every AI assistant makes mistakes. Knowing how and when they happen is what sepa
 1. **Ask for sources.** "Where does that come from? Give me links." Then click the links. If a link doesn't exist or says something different, be suspicious.
 2. **Ask it to double-check itself.** "Review your answer for mistakes." It often catches its own errors.
 3. **Cross-check with a second assistant.** Paste the answer into a different AI and ask, "Is this accurate?"
-4. **Go to the source** for anything that matters: Medicare.gov, IRS.gov, your doctor, your accountant, the manufacturer's manual.
+4. **Go to the source** for anything that matters: [Medicare.gov](https://www.medicare.gov), [IRS.gov](https://www.irs.gov), your doctor, your accountant, the manufacturer's manual.
 
 <div class="try">
 

@@ -10,7 +10,7 @@ Static sites can be published on the internet for free. Here are two well-known 
 
 ## Option 1: Netlify Drop (quickest)
 
-1. Go to **app.netlify.com/drop**.
+1. Go to [app.netlify.com/drop](https://app.netlify.com/drop).
 2. Drag your `my-website` folder onto the page.
 3. In a few seconds you get a web address like `cheerful-otter-12345.netlify.app`.
 4. Create a free account to keep the site and change its name.
@@ -21,7 +21,7 @@ To update the site, drag the folder in again from your site's Deploys page.
 
 GitHub is a free service for storing projects, used by millions of programmers. GitHub Pages publishes a website from a GitHub project.
 
-1. Create a free account at **github.com**.
+1. Create a free account at [github.com](https://github.com).
 2. Click **New repository**. Name it, for example, `my-website`, and make it **Public**.
 3. Click **uploading an existing file**, drag in all your website files, and click **Commit changes**.
 4. Go to **Settings › Pages**. Under **Branch**, choose `main` and click **Save**.

@@ -25,7 +25,7 @@ const nextPath = paths[idx + 1];
     <div class="chips"><span><Icon name="list" /> {lessons.length} lessons</span><span><Icon name="clock" /> {total}</span>{path.device && <span><Icon name="device" /> {path.device}</span>}</div>
     {lessons.length > 0 && <p><a class="btn" href={url(`paths/${path.slug}/${slugOf(lessons[0])}`)}>Start lesson 1</a></p>}
     <h2>Lessons in this path</h2>
-    <ol class="lesson-list">
+    <ol class="lesson-list" role="list">
       {lessons.map((l) => (
         <li><a href={url(`paths/${path.slug}/${slugOf(l)}`)}><div><strong>{l.data.title}</strong><span>{l.data.summary} · {l.data.minutes} min</span></div></a></li>
       ))}

@@ -9,6 +9,7 @@ const counts = await Promise.all(paths.map(async (p) => (await lessonsFor(p.slug
   <div class="wrap page">
     <h1>All learning paths</h1>
     <p class="lede">Each path is a short series of lessons. The first three build on each other. After that, pick the project that interests you.</p>
+    <h2 class="sr-only">Paths</h2>
     <div class="grid">{paths.map((p, i) => <PathCard path={p} count={counts[i]} />)}</div>
   </div>
 </Base>

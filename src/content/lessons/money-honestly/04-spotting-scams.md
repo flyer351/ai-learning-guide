@@ -58,7 +58,9 @@ You're not alone, and acting quickly helps.
 3. **Note any deadlines in your contract,** such as cancellation windows or arbitration opt-outs (some must be sent by certified mail).
 4. **Call your credit card company** about a dispute if the product wasn't as promised.
 5. **Get independent advice** before signing anything new, especially legal documents such as trusts: a local attorney or accountant with no ties to the program.
-6. **Report it** to the FTC at ReportFraud.ftc.gov and to your state attorney general. Reports help stop these programs for others.
+6. **Report it** to the FTC at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov) and to your state attorney general. Reports help stop these programs for others.
+
+If you'd like to talk it through with a person, the free [AARP Fraud Watch Network Helpline](https://www.aarp.org/fraudhelpline) (877-908-3360) is open to anyone, member or not.
 
 <div class="takeaway">
 

@@ -15,6 +15,14 @@ You've likely run a department, a household budget or even a business. You alrea
 
 An LLC can make sense later, for liability protection or once income is meaningful. It's rarely needed **before** you've earned anything.
 
+## Three tax points worth knowing
+
+These are general US rules. Your accountant can tell you how they apply to you.
+
+- **Self-employment tax.** If you treat it as a business and your net profit is **$400 or more** in a year, you also file Schedule SE and pay self-employment tax (about 15.3%, for Social Security and Medicare), on top of income tax.
+- **Hobby or business.** If it's a hobby rather than a business, the income is still reported, but hobby expenses (like the $99 Apple fee) can't be deducted. That's one real reason the question matters.
+- **Social Security before full retirement age.** If you're collecting benefits and haven't reached full retirement age, earnings above an annual limit can temporarily reduce your checks. A small hobby income is usually well under it, but it's worth asking.
+
 ## Costs that are real
 
 - Apple Developer Program: $99/year (only if you publish an app)

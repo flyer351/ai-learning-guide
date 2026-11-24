@@ -10,14 +10,20 @@ Publishing is optional. Plenty of people build apps just for themselves and thei
 
 ## 1. Join the Apple Developer Program
 
-Sign up at **developer.apple.com/programs**. It costs **$99 a year**. You can enroll as an individual using your own name. Enrolling as an organization requires a business entity and a D-U-N-S number, which isn't necessary for a hobby app. You don't need an LLC to publish an app.
+Sign up at [developer.apple.com/programs](https://developer.apple.com/programs/). It costs **$99 a year**. You can enroll as an individual using your own name. Enrolling as an organization requires a business entity and a D-U-N-S number, which isn't necessary for a hobby app. You don't need an LLC to publish an app.
+
+<div class="warn">
+
+**Good to know: what's public.** As an individual, your **legal name** appears as the seller on your app's App Store page. If you sell your app in the European Union, EU law requires sellers ("traders") to show an **address, phone number and email** on the EU App Store. If you'd rather not publish your home address, you can leave the EU countries off when you choose where the app is available, or use a business address. App Store Connect asks about this when you set up the app.
+
+</div>
 
 ## 2. Set up your app in App Store Connect
 
-At **appstoreconnect.apple.com**, create a new app and fill in:
+At [appstoreconnect.apple.com](https://appstoreconnect.apple.com), create a new app and fill in:
 
 - Name, subtitle and description (AI is great at drafting these)
-- Screenshots (take them in the Simulator with Command-S)
+- Screenshots (take them in the Simulator with Command-S, using the largest iPhone model, such as a "Pro Max", because that's the size Apple requires)
 - Category, age rating and price (free is simplest)
 - A **privacy policy web page**. Even "This app collects no data" needs a web address. The [website path](../../website/) shows how to make one for free.
 - **Privacy "nutrition label"** answers: if you collect nothing, it's quick.

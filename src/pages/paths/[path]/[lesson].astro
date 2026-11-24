@@ -42,6 +42,10 @@ const { Content } = await render(lesson);
     {prev && <a class="prev" href={url(`paths/${path.slug}/${slugOf(prev)}`)}>← Back to lesson {i}</a>}
   </article>
   <script>
+    // Lesson lists are styled without bullets, which makes Safari's VoiceOver stop
+    // announcing them as lists. An explicit role keeps them announced.
+    document.querySelectorAll('.prose ol, .prose ul').forEach((l) => l.setAttribute('role', 'list'));
+
     // Adds a "Copy message" button under each example prompt. Runs only in the reader's browser.
     document.querySelectorAll('.try blockquote').forEach((q) => {
       const b = document.createElement('button');

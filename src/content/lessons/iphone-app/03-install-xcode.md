@@ -13,7 +13,7 @@ summary: Set up Apple's free app-building software and see a "Hello, world" app 
 1. Open the **App Store** on your Mac.
 2. Search for **Xcode** and click **Get**. It's a big download, often 10 GB or more.
 3. Open Xcode when it finishes. It may ask to install extra components and which platforms you want. Choose **iOS** and let it finish.
-4. If it asks for your Apple Account, sign in with your usual Apple ID. That's free.
+4. If it asks for your Apple Account, sign in with the one you already use for your iPhone. That's free.
 
 ## Create your first project
 

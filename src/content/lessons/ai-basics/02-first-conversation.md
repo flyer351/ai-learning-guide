@@ -15,10 +15,10 @@ The big four all have good free versions. Pick one to start. You can try the oth
 
 | Assistant | Web address |
 |---|---|
-| ChatGPT, by OpenAI | chatgpt.com |
-| Claude, by Anthropic | claude.ai |
-| Gemini, by Google | gemini.google.com |
-| Copilot, by Microsoft | copilot.microsoft.com |
+| ChatGPT, by OpenAI | [chatgpt.com](https://chatgpt.com) |
+| Claude, by Anthropic | [claude.ai](https://claude.ai) |
+| Gemini, by Google | [gemini.google.com](https://gemini.google.com) |
+| Copilot, by Microsoft | [copilot.microsoft.com](https://copilot.microsoft.com) |
 
 </div>
 
@@ -26,9 +26,9 @@ Each also has a free app for iPhone, iPad and Android.
 
 ## Here's what you'll do
 
-1. Open the web address in your browser, such as Safari, Chrome or Edge.
+1. Tap or click the web address above, or type it into your browser, such as Safari, Chrome or Edge.
 2. Sign up with your email address, or with your Google, Apple or Microsoft account. No credit card is needed.
-3. Find the box at the bottom of the screen. It usually says something like "Ask anything" or "How can I help?"
+3. Find the message box. On a phone it's at the bottom of the screen; on a computer it may start in the middle. It usually says something like "Ask anything" or "How can I help?"
 4. Type your question and press Enter (or tap the arrow button).
 5. Read the reply, then ask a follow-up, just as you would with a person.
 

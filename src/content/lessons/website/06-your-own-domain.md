@@ -10,7 +10,7 @@ summary: Custom domain names, privacy policies, and keeping your site fresh.
 
 An address like `smithfamilystories.com` is easier to share than `cheerful-otter-12345.netlify.app`. Domain names usually cost **$10 to $20 a year** from registrars such as Cloudflare, Porkbun, Namecheap or Amazon's Route 53.
 
-1. Search for and buy your name at a registrar. Skip the add-ons: you don't need their website builder, email bundle or "SEO package."
+1. Search for and buy your name at a registrar. Skip the add-ons: you don't need their website builder, email bundle or "SEO package." Do make sure **WHOIS privacy** (sometimes called domain privacy) is on, so your home address isn't listed in the public record for the domain. Most registrars include it free.
 2. In Netlify or GitHub Pages settings, add your custom domain. They'll show you a couple of settings (called DNS records) to copy into your registrar's control panel.
 3. Wait an hour or so. Turn on **HTTPS** (the padlock) when it's offered. It's free.
 

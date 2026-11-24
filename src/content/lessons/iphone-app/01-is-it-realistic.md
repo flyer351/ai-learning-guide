@@ -14,7 +14,7 @@ Yes, for a simple app. With an AI coding assistant doing most of the typing, peo
 
 | Item | Cost | Notes |
 |---|---|---|
-| A Mac | You may own one | Apple's app-building software, **Xcode**, only runs on macOS. A Mac from the last 4 or 5 years with 16 GB of memory is comfortable. |
+| A Mac | You may own one | Apple's app-building software, **Xcode**, only runs on macOS. A Mac with an Apple M-series chip (M1 or newer) and 16 GB of memory is comfortable. Older Intel Macs are losing support for the latest Xcode. |
 | An iPhone | You likely own one | For testing your app on a real phone. |
 | Xcode | Free | Download from the Mac App Store. |
 | An AI assistant | Free to about $20/month | A paid plan helps for longer coding sessions. |

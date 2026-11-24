@@ -35,7 +35,7 @@ You can photograph lab results and ask for an explanation. Crop out your name, b
 
 ## Medicare and insurance
 
-AI can explain the difference between Medicare Advantage and Medigap, what Part D covers, or how an appeal works. Rules and plans change every year, so confirm details at Medicare.gov or with your State Health Insurance Assistance Program (SHIP), which offers free, unbiased counseling.
+AI can explain the difference between Medicare Advantage and Medigap, what Part D covers, or how an appeal works. Rules and plans change every year, so confirm details at [Medicare.gov](https://www.medicare.gov) or with your [State Health Insurance Assistance Program (SHIP)](https://www.shiphelp.org), which offers free, unbiased counseling.
 
 <div class="warn">
 

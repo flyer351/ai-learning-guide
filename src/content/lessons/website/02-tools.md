@@ -18,7 +18,7 @@ Everything in this path works the same way on a Mac or a Windows PC.
 
 A code editor is like a word processor for website files. **Visual Studio Code** (VS Code) is free and works on Mac and Windows.
 
-1. Go to **code.visualstudio.com** and download the version for your computer.
+1. Go to [code.visualstudio.com](https://code.visualstudio.com) and download the version for your computer.
 2. Install it like any other program.
 3. Open it. Choose **File › Open Folder** and create a new folder called `my-website` in your Documents folder.
 
