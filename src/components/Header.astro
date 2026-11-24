@@ -1,0 +1,31 @@
+---
+import { url } from '../data/url';
+const here = Astro.url.pathname;
+const links = [
+  { href: url('start-here'), label: 'Start here' },
+  { href: url('paths'), label: 'Paths' },
+  { href: url('paths/money-honestly/spotting-scams'), label: 'Stay safe' },
+  { href: url('about'), label: 'About' },
+];
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href={url()}><i aria-hidden="true"></i>AI Learning Guide</a>
+    <nav class="links" aria-label="Main">
+      {links.map((l) => <a href={l.href} aria-current={here === l.href ? 'page' : undefined}>{l.label}</a>)}
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main menu">
+        {links.map((l) => <a href={l.href} aria-current={here === l.href ? 'page' : undefined}>{l.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+  // Close the Menu when the reader taps anywhere outside it.
+  document.addEventListener('click', (e) => {
+    const menu = document.querySelector('.site-header .menu');
+    if (menu instanceof HTMLDetailsElement && menu.open && !menu.contains(e.target as Node)) menu.open = false;
+  });
+</script>

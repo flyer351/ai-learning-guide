@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../data/url';
+---
+<Base title="Start here" description="How the AI Learning Guide works, what you need, and where to begin.">
+  <div class="wrap narrow page prose">
+    <h1>Start here</h1>
+    <p class="lede">This guide is for people who have built long careers, run households and businesses, and kept learning all along, but who didn't grow up with today's technology. You already have the hard part: judgment. This guide adds the know-how.</p>
+
+    <h2>How the guide works</h2>
+    <ul>
+      <li><strong>Paths</strong> are short series of lessons on one topic. There are six.</li>
+      <li><strong>Lessons</strong> take 10 to 20 minutes. Each one has a "Try it now" box with something to do, usually a message you can copy and paste into an AI assistant.</li>
+      <li><strong>The bar at the top</strong> of each lesson shows where you are in the path. Tap any segment to jump to that lesson.</li>
+      <li><strong>Nothing is saved</strong> about you. There's no account, so the guide can't remember where you left off. Your browser's bookmarks can.</li>
+    </ul>
+
+    <h2>A suggested order</h2>
+    <ol role="list">
+      <li><a href={url('paths/ai-basics')}>AI basics</a>. Everyone should start here, even if you have tried ChatGPT before.</li>
+      <li><a href={url('paths/everyday-help')}>Everyday help</a>. Put AI to work on real tasks from your week.</li>
+      <li><a href={url('paths/agentic-ai')}>AI that does tasks</a>. Understand the newest tools before you need them.</li>
+      <li>Then pick a project: <a href={url('paths/iphone-app')}>build an iPhone app</a> or <a href={url('paths/website')}>build a website</a>. The website path is the gentler of the two.</li>
+      <li>Read <a href={url('paths/money-honestly')}>Money, honestly</a> any time, and especially before paying for any AI course or coaching.</li>
+    </ol>
+
+    <h2>What you'll need</h2>
+    <div class="card">
+      <p><strong>For the first three paths:</strong> any computer, tablet or phone with internet. A computer with a full keyboard is more comfortable.</p>
+      <p><strong>For building iPhone apps:</strong> a Mac. Apple's app-building software only runs on Macs. You'll also need an iPhone to test on, and later a $99-per-year Apple developer membership if you decide to publish.</p>
+      <p><strong>For building a website:</strong> a Mac or a Windows PC. Both work equally well.</p>
+      <p><strong>Money:</strong> none to start. Free versions of the AI assistants are enough for every lesson. Paid plans (usually about $20 a month) are optional and covered in the lessons where they help.</p>
+    </div>
+
+    <h2>A few habits that help</h2>
+    <ul>
+      <li>Keep a notebook, paper or digital, of messages that worked well for you.</li>
+      <li>When you get stuck, describe the problem to the AI as you would to a helpful colleague. Copy the exact error message if there is one.</li>
+      <li>Don't type passwords, Social Security numbers or account numbers into any AI tool.</li>
+      <li>Take breaks. Coming back the next day often makes a stubborn problem obvious.</li>
+    </ul>
+
+    <p><a class="btn" href={url('paths/ai-basics/what-ai-is')}>Begin lesson one</a></p>
+  </div>
+</Base>

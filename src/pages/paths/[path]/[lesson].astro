@@ -1,0 +1,64 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import { render } from 'astro:content';
+import { paths, getPath } from '../../../data/paths';
+import { allLessons, lessonsFor, pathOf, slugOf, type Lesson } from '../../../data/lessons';
+import { url } from '../../../data/url';
+
+export async function getStaticPaths() {
+  const all = await allLessons();
+  return all.map((l) => ({ params: { path: pathOf(l), lesson: slugOf(l) }, props: { lesson: l } }));
+}
+const { lesson } = Astro.props as { lesson: Lesson };
+const path = getPath(pathOf(lesson))!;
+const siblings = await lessonsFor(path.slug);
+const i = siblings.findIndex((l) => l.id === lesson.id);
+const prev = siblings[i - 1];
+const next = siblings[i + 1];
+const pathIdx = paths.findIndex((p) => p.slug === path.slug);
+const nextPath = paths[pathIdx + 1];
+const { Content } = await render(lesson);
+---
+<Base title={lesson.data.title} description={lesson.data.summary}>
+  <Fragment slot="top">
+    <nav class="steps" aria-label={`Lesson ${i + 1} of ${siblings.length}`}>
+      {siblings.map((l, n) => (
+        <a href={url(`paths/${path.slug}/${slugOf(l)}`)} class={n < i ? 'done' : n === i ? 'on' : ''} aria-label={`Lesson ${n + 1}: ${l.data.title}`} aria-current={n === i ? 'page' : undefined}></a>
+      ))}
+    </nav>
+  </Fragment>
+  <article class="lesson">
+    <a class="back" href={url(`paths/${path.slug}`)}>← {path.title}</a>
+    <div class="label" style="margin-top:14px">Lesson {i + 1} of {siblings.length}</div>
+    <h1>{lesson.data.title}</h1>
+    <div class="chips"><span><Icon name="clock" /> {lesson.data.minutes} min</span><span><Icon name="info" /> {lesson.data.device}</span></div>
+    <div class="prose"><Content /></div>
+    {next ? (
+      <a class="next" href={url(`paths/${path.slug}/${slugOf(next)}`)}><span><small>Up next · Lesson {i + 2}</small><b>{next.data.title}</b></span><span class="arrow">→</span></a>
+    ) : (
+      <a class="next" href={nextPath ? url(`paths/${nextPath.slug}`) : url('paths')}><span><small>You finished this path</small><b>{nextPath ? `Next path: ${nextPath.title}` : 'Back to all paths'}</b></span><span class="arrow">→</span></a>
+    )}
+    {prev && <a class="prev" href={url(`paths/${path.slug}/${slugOf(prev)}`)}>← Back to lesson {i}</a>}
+  </article>
+  <script>
+    // Lesson lists are styled without bullets, which makes Safari's VoiceOver stop
+    // announcing them as lists. An explicit role keeps them announced.
+    document.querySelectorAll('.prose ol, .prose ul').forEach((l) => l.setAttribute('role', 'list'));
+
+    // Adds a "Copy message" button under each example prompt. Runs only in the reader's browser.
+    document.querySelectorAll('.try blockquote').forEach((q) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'copy';
+      b.textContent = 'Copy message';
+      b.addEventListener('click', async () => {
+        const text = (q as HTMLElement).innerText.trim();
+        try { await navigator.clipboard.writeText(text); b.textContent = 'Copied'; }
+        catch { const r = document.createRange(); r.selectNodeContents(q); const s = getSelection(); s?.removeAllRanges(); s?.addRange(r); b.textContent = 'Selected, now press copy'; }
+        setTimeout(() => (b.textContent = 'Copy message'), 2500);
+      });
+      q.after(b);
+    });
+  </script>
+</Base>

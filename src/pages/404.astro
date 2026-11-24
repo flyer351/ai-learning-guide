@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../data/url';
+---
+<Base title="Page not found" description="This page doesn't exist. Head back to the home page or browse all learning paths.">
+  <div class="wrap narrow page prose">
+    <h1>We couldn't find that page</h1>
+    <p class="lede">The address may have a typo, or the page may have moved. Nothing is wrong on your end.</p>
+    <div class="btn-row"><a class="btn" href={url()}>Go to the home page</a><a class="btn soft" href={url('paths')}>Browse all paths →</a></div>
+  </div>
+</Base>
