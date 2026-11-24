@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config';
 
-// Served from https://flyer351.github.io/ai-learning-guide/ until a custom domain is added.
-// When a custom domain is set up, change `site` to it and remove `base`.
+// Served from the custom domain https://aistudytime.com/ (public/CNAME tells GitHub Pages).
 export default defineConfig({
-  site: 'https://flyer351.github.io',
-  base: '/ai-learning-guide',
+  site: 'https://aistudytime.com',
   trailingSlash: 'always',
 });
