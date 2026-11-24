@@ -90,7 +90,7 @@ code { font-size: 0.9em; background: var(--mint); padding: 1px 6px; border-radiu
 .band a { color: #fff; font-weight: 600; }
 
 /* Generic content pages */
-.page { padding: 20px 0 48px; }
+.page { padding-top: 20px; padding-bottom: 48px; }
 .page h1 { font-size: 34px; margin: 6px 0 14px; letter-spacing: -0.01em; }
 .page h2 { font-size: 25px; margin: 36px 0 10px; }
 .page .lede { font-size: 20px; color: var(--muted); }
@@ -133,7 +133,7 @@ code { font-size: 0.9em; background: var(--mint); padding: 1px 6px; border-radiu
 .prose ol > li::before { content: counter(s); flex: none; width: 34px; height: 34px; border-radius: 12px; background: var(--mint); color: var(--green); font-weight: 700; display: grid; place-items: center; font-size: 16px; }
 .prose table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; font-size: 17px; }
 .prose .table { overflow-x: auto; margin: 18px 0; }
-.prose th, .prose td { text-align: left; padding: 10px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+.prose th, .prose td { overflow-wrap: anywhere; text-align: left; padding: 10px 14px; border-top: 1px solid var(--line); vertical-align: top; }
 .prose th { background: var(--mint); color: var(--green); border-top: 0; }
 
 .try, .takeaway, .warn { border-radius: var(--radius); padding: 24px; margin: 22px 0; }

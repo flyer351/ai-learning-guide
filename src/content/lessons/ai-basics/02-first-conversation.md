@@ -13,12 +13,12 @@ The big four all have good free versions. Pick one to start. You can try the oth
 
 <div class="table">
 
-| Assistant | Made by | Web address |
-|---|---|---|
-| ChatGPT | OpenAI | chatgpt.com |
-| Claude | Anthropic | claude.ai |
-| Gemini | Google | gemini.google.com |
-| Copilot | Microsoft | copilot.microsoft.com |
+| Assistant | Web address |
+|---|---|
+| ChatGPT, by OpenAI | chatgpt.com |
+| Claude, by Anthropic | claude.ai |
+| Gemini, by Google | gemini.google.com |
+| Copilot, by Microsoft | copilot.microsoft.com |
 
 </div>
 

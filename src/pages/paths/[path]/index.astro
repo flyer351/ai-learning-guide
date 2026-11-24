@@ -11,6 +11,8 @@ export async function getStaticPaths() {
 const { path } = Astro.props as { path: LearningPath };
 const lessons = await lessonsFor(path.slug);
 const minutes = lessons.reduce((t, l) => t + l.data.minutes, 0);
+const hours = Math.round((minutes / 60) * 2) / 2;
+const total = minutes < 60 ? `About ${Math.round(minutes / 5) * 5} minutes in total` : `About ${hours} ${hours === 1 ? 'hour' : 'hours'} in total`;
 const idx = paths.findIndex((p) => p.slug === path.slug);
 const nextPath = paths[idx + 1];
 ---
@@ -20,7 +22,7 @@ const nextPath = paths[idx + 1];
     <div style="display:flex;gap:14px;align-items:center;margin-top:18px"><span class="ic"><Icon name={path.icon} /></span><span class="label">Path {idx + 1} of {paths.length}</span></div>
     <h1>{path.title}</h1>
     <p class="lede">{path.intro}</p>
-    <div class="chips"><span><Icon name="list" /> {lessons.length} lessons</span><span><Icon name="clock" /> About {Math.round(minutes / 5) * 5} minutes in total</span>{path.device && <span><Icon name="device" /> {path.device}</span>}</div>
+    <div class="chips"><span><Icon name="list" /> {lessons.length} lessons</span><span><Icon name="clock" /> {total}</span>{path.device && <span><Icon name="device" /> {path.device}</span>}</div>
     {lessons.length > 0 && <p><a class="btn" href={url(`paths/${path.slug}/${slugOf(lessons[0])}`)}>Start lesson 1</a></p>}
     <h2>Lessons in this path</h2>
     <ol class="lesson-list">
