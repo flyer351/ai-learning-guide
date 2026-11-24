@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import PathCard from '../components/PathCard.astro';
+import { paths } from '../data/paths';
+import { lessonsFor } from '../data/lessons';
+import { url } from '../data/url';
+const counts = await Promise.all(paths.map(async (p) => (await lessonsFor(p.slug)).length));
+---
+<Base title="AI Learning Guide" description="Free, calm, step-by-step lessons that help curious adults learn to use AI, build an iPhone app or a website, and avoid AI money scams.">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>New to AI? You're in the right place.</h1>
+        <p>Calm, step-by-step lessons for curious minds. No jargon, no pressure, and nothing to buy.</p>
+        <div class="btn-row"><a class="btn" href={url('paths/ai-basics/what-ai-is')}>Start with lesson one</a><a class="btn soft" href={url('paths')}>Browse paths →</a></div>
+      </div>
+      <div class="art" aria-hidden="true"><span class="c1"></span><span class="c2"></span><span class="c3">Ask me anything…</span></div>
+    </div>
+
+    <div class="promise">
+      <div><Icon name="check" /> Always free, no account needed</div>
+      <div><Icon name="shield" /> No ads, cookies or tracking</div>
+      <div><Icon name="clock" /> Lessons take 10 to 20 minutes</div>
+    </div>
+
+    <h2 class="section-title">Pick a path</h2>
+    <p class="sub">Go in order, or start wherever your curiosity takes you.</p>
+    <div class="grid">
+      {paths.map((p, i) => <PathCard path={p} count={counts[i]} />)}
+    </div>
+
+    <div class="band">
+      <h2>Our promise</h2>
+      <p>This guide will never sell you a course, a coach or a "done-for-you" business. If a website promises fast money from AI, our free guide explains what to look for before you pay anything.</p>
+      <a href={url('paths/money-honestly/spotting-scams')}>Read: spotting AI money scams →</a>
+    </div>
+
+    <h2 class="section-title">What you'll need</h2>
+    <div class="grid" style="margin-bottom:24px">
+      <div class="card" style="margin:0"><h3>A computer and internet</h3><p>Any recent Mac or Windows PC works for the AI, agent and website paths. A phone or tablet is fine for reading and for chatting with AI.</p></div>
+      <div class="card" style="margin:0"><h3>A Mac for iPhone apps</h3><p>Apple's free app-building software, Xcode, only runs on a Mac. A Mac mini or MacBook Air from the last few years is plenty.</p></div>
+      <div class="card" style="margin:0"><h3>A little patience</h3><p>You'll get stuck sometimes. That's normal. Every lesson shows you how to ask the AI itself for help.</p></div>
+    </div>
+    <p><a href={url('start-here')}>New here? Read "Start here" for how the guide works →</a></p>
+  </div>
+</Base>

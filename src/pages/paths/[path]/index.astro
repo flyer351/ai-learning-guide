@@ -1,0 +1,33 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import { paths, type LearningPath } from '../../../data/paths';
+import { lessonsFor, slugOf } from '../../../data/lessons';
+import { url } from '../../../data/url';
+
+export async function getStaticPaths() {
+  return paths.map((p) => ({ params: { path: p.slug }, props: { path: p } }));
+}
+const { path } = Astro.props as { path: LearningPath };
+const lessons = await lessonsFor(path.slug);
+const minutes = lessons.reduce((t, l) => t + l.data.minutes, 0);
+const idx = paths.findIndex((p) => p.slug === path.slug);
+const nextPath = paths[idx + 1];
+---
+<Base title={path.title} description={path.blurb}>
+  <div class="wrap narrow page">
+    <a class="back" href={url('paths')}>← All paths</a>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:18px"><span class="ic"><Icon name={path.icon} /></span><span class="label">Path {idx + 1} of {paths.length}</span></div>
+    <h1>{path.title}</h1>
+    <p class="lede">{path.intro}</p>
+    <div class="chips"><span><Icon name="list" /> {lessons.length} lessons</span><span><Icon name="clock" /> About {Math.round(minutes / 5) * 5} minutes in total</span>{path.device && <span><Icon name="device" /> {path.device}</span>}</div>
+    {lessons.length > 0 && <p><a class="btn" href={url(`paths/${path.slug}/${slugOf(lessons[0])}`)}>Start lesson 1</a></p>}
+    <h2>Lessons in this path</h2>
+    <ol class="lesson-list">
+      {lessons.map((l) => (
+        <li><a href={url(`paths/${path.slug}/${slugOf(l)}`)}><div><strong>{l.data.title}</strong><span>{l.data.summary} · {l.data.minutes} min</span></div></a></li>
+      ))}
+    </ol>
+    {nextPath && <a class="next" href={url(`paths/${nextPath.slug}`)}><span><small>Next path</small><b>{nextPath.title}</b></span><span class="arrow">→</span></a>}
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+---
+import { url } from '../data/url';
+const links = [
+  { href: url('start-here'), label: 'Start here' },
+  { href: url('paths'), label: 'Paths' },
+  { href: url('paths/money-honestly/spotting-scams'), label: 'Stay safe' },
+  { href: url('about'), label: 'About' },
+];
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href={url()}><i aria-hidden="true"></i>AI Learning Guide</a>
+    <nav class="links" aria-label="Main">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main menu">
+        {links.map((l) => <a href={l.href}>{l.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>

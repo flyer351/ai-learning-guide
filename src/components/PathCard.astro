@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../data/url';
+import type { LearningPath } from '../data/paths';
+interface Props { path: LearningPath; count: number }
+const { path, count } = Astro.props;
+---
+<a class="path-card" href={url(`paths/${path.slug}`)}>
+  <div class="top"><span class="ic"><Icon name={path.icon} /></span><span class="tag">{count} lessons{path.device ? ` · ${path.device}` : ''}</span></div>
+  <h3>{path.title}</h3>
+  <p>{path.blurb}</p>
+  <div class="go">Start path →</div>
+</a>
